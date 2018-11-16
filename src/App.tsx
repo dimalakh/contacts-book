@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { ContactsList } from './components'
+import { ContactsList, Search } from './components'
 
 const ContactsListProps = {
   activeId: 1,
@@ -16,9 +16,13 @@ const ContactsListProps = {
   fetchContacts: () => { return },
   setActive: () => { return }
 }
+const SearchProps = {
+  setQuery: () => { return }
+}
 const App: React.StatelessComponent = () => (
   <div className='container'>
     <aside>
+      <Search {...SearchProps} />
       <ContactsList {...ContactsListProps} />
     </aside>
   </div>
