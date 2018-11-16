@@ -21,6 +21,7 @@
   "homepage": "https://github.com/dimalakh/contacts-book#readme",
   "dependencies": {
     "react": "^16.6.3",
+    "react-copy-to-clipboard": "^5.0.1",
     "react-dom": "^16.6.3"
   },
   "devDependencies": {
@@ -28,6 +29,7 @@
     "@babel/preset-env": "^7.1.6",
     "@babel/preset-react": "^7.0.0",
     "@types/react": "^16.7.6",
+    "@types/react-copy-to-clipboard": "^4.2.6",
     "@types/react-dom": "^16.0.9",
     "@types/react-hot-loader": "^4.1.0",
     "awesome-typescript-loader": "^5.2.1",

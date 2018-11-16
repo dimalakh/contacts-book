@@ -1,0 +1,60 @@
+@import '../../styles/vars'
+
+.contact-detailed
+  display: flex
+  flex-direction: column
+  flex: 1
+  align-items: center
+  padding: 77px 0
+
+  .detailed-placeholder
+    color: $text-disabled-color
+    padding: 0 2rem
+    text-align: center
+    font-size: 1.1rem
+
+  .detailed-avatar
+    border-radius: 50%
+    width: 135px
+    height: 135px
+  
+  .detailed-title
+    font-weight: 600
+    font-size: 1.4rem
+    padding: 1.4rem 0 2.8rem 0
+  
+.input-field
+  display: flex
+  flex-direction: column
+  max-width: 250px
+  width: 100%
+  margin-bottom: 25px
+  
+  .field-title
+    font-size: .9rem
+    margin-bottom: .7rem
+
+  .field-value
+    flex: 1
+    padding: 10px 15px
+    background-color: $secondary-color
+    border: none
+    font-size: .9rem
+    cursor: pointer
+
+  .field-wrapper
+    display: flex
+    flex-direction: row
+  
+    &:hover
+      .field-info
+        display: flex
+        
+  .field-info
+    display: none
+    background-color: $secondary-color
+    border: none
+    font-size: .9rem
+    padding-right: 1rem
+    color: $primary-color
+    cursor: pointer
