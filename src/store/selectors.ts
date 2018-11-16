@@ -1,7 +1,9 @@
 import { IContact, IState } from '../types'
 
 export const getContactsList = (state: IState): IContact[] => {
-  const regexp = new RegExp(state.contacts.searchQuery.toLowerCase(), 's')
+  const removeDeniedPattern = /[!"#$%&'()*+,\-./:;<=>?@[\]^_`{|}~\\]/gi
+  const str = state.contacts.searchQuery.replace(removeDeniedPattern, '')
+  const regexp = new RegExp(str.toLowerCase(), 's')
 
   if (state.contacts.searchQuery) {
     return state.contacts.list.filter((contact: any) => regexp.test(contact.fullName.toLowerCase()))
