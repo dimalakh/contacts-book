@@ -1,0 +1,56 @@
+@import '../../styles/vars'
+
+.contact-list
+  flex: 1 1 auto
+  overflow-y: scroll
+  flex-direction: column
+  border-top: 1px solid $secondary-color
+
+.contact-list-placeholder
+  color: $text-disabled-color
+  padding: 1.3rem
+  text-align: center
+  line-height: 1.5rem
+  font-size: .9rem
+
+.contact-list-item
+  padding: 1.3rem
+  border-bottom: 1px solid $secondary-color
+  cursor: pointer
+  display: flex
+  flex: 1
+
+  &.active
+    background-color: $primary-color
+    border-bottom: 1px solid $primary-color
+    color: $text-white-color
+    
+    &:hover
+      background-color: $primary-color
+      border-bottom: 1px solid $primary-color
+  
+  &:hover
+    background-color: $secondary-color
+    border-bottom: 1px solid $secondary-color
+  
+  &:last-child
+    border-bottom: none
+
+  .list-item-avatar
+    width: 45px
+    height: 45px
+    border-radius: 50%
+  
+  .list-item-content
+    display: flex
+    flex-direction: column
+    padding: 0 0 0 1rem
+    justify-content: space-around
+  
+  .list-item-title
+    font-size: 1rem
+    font-weight: 600
+  
+  .list-item-subtitle
+    font-size: .9rem
+    font-weight: 400
