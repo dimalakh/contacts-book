@@ -30,18 +30,21 @@ class ContactField extends React.Component <IProps, IState> {
   }
 
   public render() {
-    if (!this.props.value) {
+    const { value, title } = this.props
+
+    if (value) {
       return null
     }
+
     return (
       <div className='input-field'>
-        <span className='field-title'>{this.props.title}:</span>
-        <CopyToClipboard text={this.props.value} onCopy={this.onCopy}>
+        <span className='field-title'>{title}:</span>
+        <CopyToClipboard text={value} onCopy={this.onCopy}>
           <div className='field-wrapper'>
             <input
               className='field-value'
               onMouseOut={this.resetState}
-              value={this.props.value}
+              value={value}
               disabled={true}
             />
             <button className='field-info'>
