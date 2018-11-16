@@ -2,10 +2,14 @@ import './styles/main.sass'
 
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
+import { Provider } from 'react-redux'
 
+import store from './store'
 import App from './App'
 
 ReactDOM.render(
-  <App />,
-  document.getElementById('root'),
+    <Provider store={store}>
+      <App />
+    </Provider>,
+    document.getElementById('root'),
 )
