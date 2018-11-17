@@ -17,10 +17,13 @@ const ContactDetailed = ({ activeContact }: IProps) => {
       </div>
     )
   }
+  const userAvatar = activeContact.avatarUrl ?
+    <img className='detailed-avatar' src={activeContact.avatarUrl} /> :
+    <div className='detailed-avatar'>{activeContact.fullName[0]}</div>
 
   return (
     <div className='contact-detailed'>
-      <img className='detailed-avatar' src={activeContact.avatarUrl} />
+      {userAvatar}
       <span className='detailed-title'>{activeContact.fullName}</span>
       <ContactField title='Phone number' value={activeContact.phoneNumber} />
       <ContactField title='Position' value={activeContact.position} />

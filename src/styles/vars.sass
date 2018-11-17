@@ -1,6 +1,7 @@
 // Colors
 $primary-color: #00a8e8
 $secondary-color: #f3f3f3
+$default-avatar-color: #f2c0ed
 $white-color: #fff
 $light-color: #fafafa
 
@@ -8,3 +9,17 @@ $light-color: #fafafa
 $text-primary-color: #303030
 $text-disabled-color: #797979
 $text-white-color: #fff
+
+// Mixins
+@mixin avatar($size, $fontSize)
+  display: flex
+  justify-content: center
+  align-items: center
+  border-radius: 50%
+  width: $size
+  height: $size
+  background-color: $default-avatar-color
+  color: $text-white-color
+  font-weight: 600
+  font-size: $fontSize
+  
