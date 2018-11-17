@@ -6,12 +6,15 @@ import rootReducer from './reducers'
 import mySaga from './sagas'
 
 const sagaMiddleware = createSagaMiddleware()
+const middlewares = [ sagaMiddleware ]
+
+if (process.env.NODE_ENV === `development`) {
+  middlewares.push(logger as any)
+}
+
 const store = createStore(
   rootReducer,
-  applyMiddleware(
-    sagaMiddleware,
-    logger
-  )
+  applyMiddleware(...middlewares)
 )
 
 sagaMiddleware.run(mySaga)
