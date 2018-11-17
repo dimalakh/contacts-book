@@ -1,7 +1,7 @@
 # Contact-book
 It is simple react app which allows user to view his contacts.
 
-#### How to run the app:
+#### How to run the app (on master branch):
 
 1. Install dependencies
 ```
