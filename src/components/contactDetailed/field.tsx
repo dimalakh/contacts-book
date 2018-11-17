@@ -32,7 +32,7 @@ class ContactField extends React.Component <IProps, IState> {
   public render() {
     const { value, title } = this.props
 
-    if (value) {
+    if (!value) {
       return null
     }
 
