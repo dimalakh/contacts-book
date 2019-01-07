@@ -1,5 +1,5 @@
 # Contact-book
-It is simple react app which allows user to view his contacts.
+It is react app which allows user to view his contacts.
 
 #### How to run the app (on master branch):
 
